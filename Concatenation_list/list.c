@@ -50,21 +50,30 @@ void	print_list(Node *head)
 	printf("\n");
 }
 
+Node	*add_to_front(Node *head, int x)
+{
+	Node	*newnode;
+
+	newnode = create_node(x);
+	newnode ->next = head;
+	return (newnode);
+}
+
 int main()
 {
-    Node *head = NULL;  // 空のリストで開始
+	Node *head = NULL;  // 空のリストで開始
     
-    printf("5を追加:\n");
-    head = add_to_end(head, 5);
-    print_list(head);
+	printf("5を追加:\n");
+	head = add_to_end(head, 5);
+	print_list(head);
     
-    printf("3を追加:\n");
-    head = add_to_end(head, 3);
-    print_list(head);
+	printf("3を追加:\n");
+	head = add_to_end(head, 3);
+	print_list(head);
     
-    printf("8を追加:\n");
-    head = add_to_end(head, 8);
-    print_list(head);
-    
-    return 0;
+	printf("8を追加:\n");
+	head = add_to_end(head, 8);
+	print_list(head);
+
+	return 0;
 }
